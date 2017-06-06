@@ -424,6 +424,8 @@ template {
   /* Layout */
   --container-width: 1063px;
   --inner-container-width: 900px;
+  /*header */
+  --header-background: #323232;
   /* Fonts */
   --primary-font: Playfair;
   --secondary-font: Ubuntu;
@@ -435,7 +437,7 @@ template {
 .container {
   width: var(--container-width);
   margin: 0 auto;
-  padding: 0 1em; }
+  width: 100%; }
 
 .inner-container {
   width: var(--inner-container-width);
@@ -481,7 +483,21 @@ fieldset {
 
 header {
   display: flex;
-  justify-content: center; }
+  justify-content: center;
+  height: 63px;
+  background-color: var(--header-background);
+  width: 100%; }
+  header nav {
+    display: flex;
+    justify-content: space-between;
+    width: 371px; }
+  header ul {
+    width: 117px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.4375em; }
+  header span {
+    color: #464b5e; }
 
 header li {
   display: inline; }

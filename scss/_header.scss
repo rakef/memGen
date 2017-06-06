@@ -1,6 +1,9 @@
 header{
     display: flex;
     justify-content: center;
+    height: 63px;
+    background-color: var(--header-background);
+    width: 100%;
     nav{
         display: flex;
         justify-content: space-between;
@@ -10,10 +13,7 @@ header{
         width: 117px;
         display: flex;
         justify-content: space-between;
-        flex-wrap: nowrap;
         font-size:em(7px);
-    }
-    li{
     }
     span{
         color:#464b5e;
