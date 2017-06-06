@@ -1,6 +1,23 @@
 header{
     display: flex;
     justify-content: center;
+    nav{
+        display: flex;
+        justify-content: space-between;
+        width:371px;
+    }
+    ul{
+        width: 117px;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: nowrap;
+        font-size:em(7px);
+    }
+    li{
+    }
+    span{
+        color:#464b5e;
+    }
 }
  header li{
      display: inline;
