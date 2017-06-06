@@ -537,7 +537,9 @@ header li {
     height: 206px;
     overflow-x: auto;
     overflow-y: auto;
-    overflow: hidden; }
+    overflow: hidden;
+    border: 1px solid black;
+    transition: 5s; }
   .images img {
     margin: -100%; }
 
@@ -569,3 +571,21 @@ h2 {
 p {
   font-size: 12px;
   font-family: 'Lato', sans-serif; }
+
+.screen {
+  transition: 2s; }
+
+.screen-active {
+  right: 0px;
+  position: relative; }
+
+.screen-inactive {
+  position: absolute;
+  right: 3000px; }
+
+#screen-meme-gen {
+  display: flex;
+  justify-content: center; }
+
+canvas {
+  background-color: pink; }

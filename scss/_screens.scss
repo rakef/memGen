@@ -1,0 +1,19 @@
+.screen {
+    transition: 2s;
+}
+.screen-active{
+    right:0px;
+    position: relative;
+    
+}
+.screen-inactive{
+    position: absolute;
+    right:3000px;
+}
+#screen-meme-gen{
+    display: flex;
+    justify-content: center;
+}
+canvas {
+    background-color: pink;
+}

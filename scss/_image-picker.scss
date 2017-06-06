@@ -9,8 +9,12 @@
         overflow-x: auto;
         overflow-y: auto;
         overflow: hidden;
+        border: 1px solid black;
+        transition: 5s;
     }
     img{
         margin: -100%;
+        
+        
     }
 }

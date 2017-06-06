@@ -6,38 +6,43 @@
   <title>Coding Academy</title>
   <link rel="stylesheet" href="dist/style.css">
 </head>
- <body>
-    <div class="container">
-        <header>
-          <nav>
-            <ul>
-              <li class = "active"><a href = "#">portfolio</a></li> <span>·</span>
-              <li><a href = "#">about</a></li>
-            </ul>
-            <ul>
-              <li><a href = "#">blog</a> </li> <span>·</span>
-              <li><a href = "#">get in touch</a></li>
-            </ul>
-          </nav>
-        </header>
-        <div><div class = "triangle"></div></div>
-        <div class = "border-bottom"></div> 
-        
-        <main>
-          <div class = "images">
-            <div class="image" ><img src ="assets/img/memeGen/0.png" alt = "you don't simply..." onclick="pickAPic(this)"></div>
-            <div class="image"><img src ="assets/img/memeGen/1.png" onclick="pickAPic(this)"></div>
-            <div class="image"><img src ="assets/img/memeGen/2.png" onclick="pickAPic(this)"></div>
-            <div class="image"><img src ="assets/img/memeGen/3.png" onclick="pickAPic(this)"></div>
-            <div class="image"><img src ="assets/img/memeGen/4.png" onclick="pickAPic(this)"></div>
-            <div class="image"><img src ="assets/img/memeGen/5.png" onclick="pickAPic(this)"></div>
-            <div class="image"><img src ="assets/img/memeGen/6.png" onclick="pickAPic(this)"></div>
-            <div class="image"><img src ="assets/img/memeGen/7.png" onclick="pickAPic(this)"></div>
-            <div class="image"><img src ="assets/img/memeGen/8.png" onclick="pickAPic(this)"></div>
-            
-          </div>
-          <div class "Rakefet"></div>
+
+<body onload="init()">
+  <div class="container">
+    <header>
+      <nav>
+        <ul>
+          <li class="active"><a href="#">portfolio</a></li> <span>·</span>
+          <li><a href="#">about</a></li>
+        </ul>
+        <ul>
+          <li><a href="#">blog</a> </li> <span>·</span>
+          <li><a href="#">get in touch</a></li>
+        </ul>
+      </nav>
+    </header>
+    <div>
+      <div class="triangle"></div>
+    </div>
+    <div class="border-bottom"></div>
+
+    <main>
+      <div id="screen-pick-meme" class="screen screen-active">
+        <div class="images">
+          <div class="image"><img src="assets/img/memeGen/0.png" alt="you don't simply..." onclick="pickAMeme(this)"></div>
+          <div class="image"><img src="assets/img/memeGen/1.png" onclick="pickAMeme(this)"></div>
+          <div class="image"><img src="assets/img/memeGen/2.png" onclick="pickAMeme(this)"></div>
+          <div class="image"><img src="assets/img/memeGen/3.png" onclick="pickAMeme(this)"></div>
+          <div class="image"><img src="assets/img/memeGen/4.png" onclick="pickAMeme(this)"></div>
+          <div class="image"><img src="assets/img/memeGen/5.png" onclick="pickAMeme(this)"></div>
+          <div class="image"><img src="assets/img/memeGen/6.png" onclick="pickAMeme(this)"></div>
+          <div class="image"><img src="assets/img/memeGen/7.png" onclick="pickAMeme(this)"></div>
       </div>
+    </div>
+    <div id="screen-meme-gen" class = "screen screen-inactive">
+      <canvas id="canvas-meme-gen" width="500" height="400"></canvas>
+    </div>
+      <div class "Rakefet"></div>
       <div class "Rakefet">
         <div class="devs-info-container">
 
@@ -48,7 +53,8 @@
           </div>
         </div>
       </div>
-    </main>
+  </div>
+  </main>
   </div>
   <script src="js/main.js"></script>
 </body>
