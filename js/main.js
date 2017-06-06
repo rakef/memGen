@@ -17,8 +17,10 @@ function pickAMeme(elImg){
     elScreen.elGenMeme.classList.toggle('screen-active');
     //elScreen.elMemeGen.left = '10000px';
     drawAMeme(elImg);
+    // console.log(elImg);
 }
-function drawAMeme(elImg, elCanvas){
-    
-    var ctx=c.getContext("2d");
+function drawAMeme(elImg){
+    var elCanvas = document.querySelector('#canvas-meme-gen');
+    var ctx = elCanvas.getContext("2d");
+    ctx.drawImage(elImg,elCanvas.width / 2,elCanvas.height /2);
 }
