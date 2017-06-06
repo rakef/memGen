@@ -413,12 +413,11 @@ template {
 
 /*----------- lato regular-----------*/
 @font-face {
-  font-family: 'Lato-Regular';
-  src: url("../assets/fonts/Lato/Lato-Regular.ttf"); }
-
-@font-face {
-  font-family: 'MavenPro-Regular';
-  src: url("../assets/fonts/MavenPro/MavenPro-Regular.ttf"); }
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 400;
+  src: local("Lato Regular"), local("Lato-Regular"), url(https://fonts.gstatic.com/s/lato/v13/UyBMtLsHKBKXelqf4x7VRQ.woff2) format("woff2");
+  unicode-range: U+0100-024F, U+1E00-1EFF, U+20A0-20AB, U+20AD-20CF, U+2C60-2C7F, U+A720-A7FF; }
 
 :root {
   /* Layout */
@@ -515,7 +514,7 @@ header li {
 .about-text {
   margin-left: 319px;
   color: #d7fcf5;
-  font-family: 'MavenPro-Regular'; }
+  font-family: 'Maven Pro', sans-serif; }
 
 h1 {
   font-size: 30px;
@@ -528,4 +527,5 @@ h2 {
   color: #20816d; }
 
 p {
-  font-size: 12px; }
+  font-size: 12px;
+  font-family: 'Lato', sans-serif; }
