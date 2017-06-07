@@ -596,8 +596,12 @@ p {
   position: relative; }
 
 .screen-inactive {
-  position: absolute;
-  transform: translate(-1500px, 0); }
+  transform: translate(-2750px, 0);
+  position: absolute; }
+
+.screens-container {
+  display: flex;
+  justify-content: center; }
 
 #screen-meme-gen {
   display: flex;
@@ -607,11 +611,25 @@ p {
     display: flex;
     flex-direction: column;
     justify-content: space-between; }
+  #screen-meme-gen .screen-inactive {
+    position: absolute; }
+
+#screen-pick-meme form {
+  display: flex;
+  justify-content: center; }
 
 canvas {
   background-color: pink; }
 
-.btn {
-  font-size: 16px;
-  height: 20px;
-  width: 20px; }
+#screen-pick-meme aside {
+  display: flex;
+  justify-content: center;
+  height: 70px; }
+
+.search-array {
+  width: 400px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap; }
+  .search-array div {
+    margin-left: 15px; }
