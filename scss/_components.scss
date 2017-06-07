@@ -57,7 +57,7 @@ p {
     flex-wrap: wrap;
 }
 
-textarea, input {
+textarea, .contact-us input {
     margin-top: 24px;
     background-color: #454545;
     width: 580px;
@@ -85,7 +85,7 @@ textarea, input {
         padding-top: 10px;
 }
 
-button{
+.contact-us button{
     width: 90px;
     height: 37px;
     margin: 16px 0;
