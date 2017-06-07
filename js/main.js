@@ -50,12 +50,16 @@ function renderSearchArray(){
     var keywords =[];
     gImgs.forEach( function(img){
         img.keywords.forEach( function(keyword){
-            htmlCode += `<div>${keyword}</div>`;
+            htmlCode += `<div class = "keyword" onclick = "addTagSearch(this)">${keyword}</div>`;
             keywords.push(keyword);
         });
     });
     var elSearchArray = document.querySelector('.search-array');
     elSearchArray.innerHTML = htmlCode;
+}
+function addTagSearch(elTag){
+    gElSearchInput.value = elTag.innerText;
+    search();
 }
 function changeAScreen(elImg){
     gElSavedImg = elImg;
@@ -66,7 +70,7 @@ function changeAScreen(elImg){
     gElScreen.elPickMeme.classList.toggle('screen-active');  
     gElScreen.elGenMeme.classList.toggle('screen-inactive');   
 
-   
+    clearAllElValues();
     drawAMeme(elImg);
 }
 function drawAMeme(elImg){ 
@@ -78,14 +82,10 @@ function drawAMeme(elImg){
 
 function addTopText(){
   drawText(gElMemeCanvas, gElInput.topText.value, gElMemeCanvas.width / 2 , 50);
-  //gTextDrawn.top = true;
- // if( !gTextDrawn.bottom && gElInput.bottomText.value ) addBottomText();
 }
 
 function addBottomText(){
     drawText(gElMemeCanvas, gElInput.bottomText.value, gElMemeCanvas.width / 2 , gElMemeCanvas.height / 1.1 );
-    //gTextDrawn.bottom = true;
-   // if( !gTextDrawn.top && gElInput.topText.value ) addTopText();
 }
 function drawText(canvas, text, width,height){
     if(!gIsRecursing){
@@ -124,6 +124,11 @@ function search(){
 
 }
 window.onbeforeunload = function(e) {
+    gElInput.bottomText.value = null;
+    gElInput.topText.value = null;
+    gElSearchInput.value = null;
+}
+function clearAllElValues(){
     gElInput.bottomText.value = null;
     gElInput.topText.value = null;
     gElSearchInput.value = null;

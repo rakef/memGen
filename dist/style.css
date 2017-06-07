@@ -528,6 +528,7 @@ header li {
   color: #2c917d; }
 
 .images {
+  min-height: 206px;
   display: flex;
   justify-content: center;
   flex-wrap: wrap; }
@@ -680,3 +681,6 @@ canvas {
   flex-wrap: wrap; }
   .search-array div {
     margin-left: 15px; }
+
+.keyword:hover {
+  cursor: pointer; }
