@@ -50,15 +50,32 @@ function renderSearchArray(){
     var keywords =[];
     gImgs.forEach( function(img){
         img.keywords.forEach( function(keyword){
-            htmlCode += `<div class = "keyword" onclick = "addTagSearch(this)">${keyword}</div>`;
             keywords.push(keyword);
         });
     });
+    keywords.sort();
+    var singledOutKeyWords = keywords.filter( function(keyword,idx){
+        if(keyword !== keywords[idx+1]){
+            return 1;
+        }
+    });
+    singledOutKeyWords.sort(function(a,b){
+        return localStorage(a) - localStorage(b);
+    });
+    singledOutKeyWords.forEach( function(keyword,idx){
+        
+    })
+
     var elSearchArray = document.querySelector('.search-array');
     elSearchArray.innerHTML = htmlCode;
 }
 function addTagSearch(elTag){
+    var searchCount = localStorage.getItem(elTag.innerText);
+    searchCount++;
+    // debugger;
+    //if(!searchCount)    searchCount++;
     gElSearchInput.value = elTag.innerText;
+    localStorage.setItem(elTag.innerText, (searchCount++) );
     search();
 }
 function changeAScreen(elImg){
