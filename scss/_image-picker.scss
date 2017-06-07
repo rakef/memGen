@@ -1,7 +1,7 @@
 .images{
     display: flex;
-    justify-content: space-between;
-    align-content:center;
+    justify-content: center;
+    // align-content:center;
     flex-wrap: wrap;
     .image{
         width:180px;
@@ -9,8 +9,12 @@
         overflow-x: auto;
         overflow-y: auto;
         overflow: hidden;
+        border: 1px solid black;
+        transition: 5s;
     }
     img{
         margin: -100%;
+        
+        
     }
 }

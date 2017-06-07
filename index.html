@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="dist/style.css">
 </head>
 
-<body>
+<body onload="init()">
   <div class="container">
     <header>
       <nav>
@@ -27,35 +27,57 @@
     <div class="border-bottom"></div>
 
     <main>
-      <div class="images">
-        <div class="image"><img src="assets/img/memeGen/0.png" alt="you don't simply..." onclick="pickAPic(this)"></div>
-        <div class="image"><img src="assets/img/memeGen/1.png" onclick="pickAPic(this)"></div>
-        <div class="image"><img src="assets/img/memeGen/2.png" onclick="pickAPic(this)"></div>
-        <div class="image"><img src="assets/img/memeGen/3.png" onclick="pickAPic(this)"></div>
-        <div class="image"><img src="assets/img/memeGen/4.png" onclick="pickAPic(this)"></div>
-        <div class="image"><img src="assets/img/memeGen/5.png" onclick="pickAPic(this)"></div>
-        <div class="image"><img src="assets/img/memeGen/6.png" onclick="pickAPic(this)"></div>
-        <div class="image"><img src="assets/img/memeGen/7.png" onclick="pickAPic(this)"></div>
-        <div class="image"><img src="assets/img/memeGen/8.png" onclick="pickAPic(this)"></div>
-
+      <div id="screen-pick-meme" class="screen screen-active">
+        <div class="images">
+          <div class="image"><img src="assets/img/memeGen/0.png" alt="you don't simply..." onclick="pickAMeme(this)"></div>
+          <div class="image"><img src="assets/img/memeGen/1.png" onclick="pickAMeme(this)"></div>
+          <div class="image"><img src="assets/img/memeGen/2.png" onclick="pickAMeme(this)"></div>
+          <div class="image"><img src="assets/img/memeGen/3.png" onclick="pickAMeme(this)"></div>
+          <div class="image"><img src="assets/img/memeGen/4.png" onclick="pickAMeme(this)"></div>
+          <div class="image"><img src="assets/img/memeGen/5.png" onclick="pickAMeme(this)"></div>
+          <div class="image"><img src="assets/img/memeGen/6.png" onclick="pickAMeme(this)"></div>
+          <div class="image"><img src="assets/img/memeGen/7.png" onclick="pickAMeme(this)"></div>
+        </div>
+      </div>
+      <div id="screen-meme-gen" class="screen screen-inactive">
+        <canvas id="canvas-meme-gen" width="500" height="400"></canvas>
       </div>
       <div class "Rakefet">
-  </div>
-  <div class "Rakefet">
-    <div class="+">
-      <div class="about-pic">
-        <image src="../assets/img/about.png"></image>
+        <div class="devs-info-container">
+          <div class="about-pic">
+            <image src="../assets/img/about.png"></image>
+          </div>
+          <div class="about-text">
+            <h1>Yefim &#38; Rakefet</h1>
+            <h2>Web Developers</h2>
+            <p>Hi, we're Yefim &#38; Rakefet, and we like memes</p>
+          </div>
+        </div>
+        <div class="contact-us">
+          <div class="left-contact-us">
+            <h3>Get In Touch</h3>
+            <div calss="contact-us-txt-field">
+              In order to get in touch use the contact form below:
+            </div>
+            <input class="input-text" type="text" placeholder="Name (Required)">
+            <input class="input-text" type="text" placeholder="Email (Required)">
+            <input class="input-text" type="text" placeholder="Subject">
+            <textarea class="input-text" onfocus="clearContents(this)">Write your message here...
+            </textarea>
+          </div>
+          <button>Send</button>
+          <div class="right-contact-us">
+          </div>
+        </div>
       </div>
-      <div class="about-text">
-        <h1>Yefim &#38; Rakefet</h1>
-        <h2>Web Developers</h2>
-        <p>Hi, we're Yefim &#38; Rakefet, and we like memes</p>
-      </div>
-    </div>
-  </div>
-  </main>
+    </main>
   </div>
   <script src="js/main.js"></script>
+  <script>
+    function clearContents(element) {
+      element.value = '';
+    }
+  </script>
 </body>
 
 </html>
