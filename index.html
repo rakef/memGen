@@ -27,21 +27,29 @@
     <div class="border-bottom"></div>
 
     <main>
+      <div class = "screens-container">
       <div id="screen-pick-meme" class="screen screen-active">
         <div class="images">
-          <div class="image"><img src="assets/img/memeGen/0.png" alt="you don't simply..." onclick="pickAMeme(this)"></div>
-          <div class="image"><img src="assets/img/memeGen/1.png" onclick="pickAMeme(this)"></div>
-          <div class="image"><img src="assets/img/memeGen/2.png" onclick="pickAMeme(this)"></div>
-          <div class="image"><img src="assets/img/memeGen/3.png" onclick="pickAMeme(this)"></div>
-          <div class="image"><img src="assets/img/memeGen/4.png" onclick="pickAMeme(this)"></div>
-          <div class="image"><img src="assets/img/memeGen/5.png" onclick="pickAMeme(this)"></div>
-          <div class="image"><img src="assets/img/memeGen/6.png" onclick="pickAMeme(this)"></div>
-          <div class="image"><img src="assets/img/memeGen/7.png" onclick="pickAMeme(this)"></div>
+
         </div>
-      </div>
-      <div id="screen-meme-gen" class="screen screen-inactive">
-        <canvas id="canvas-meme-gen" width="500" height="400"></canvas>
-      </div>
+        <form>
+          <input type="text" name="search-text">
+          <input type="button" name="search-button" value="search" onclick = "search()">
+        </form>
+        <aside>
+          <div class = "search-array"></div>
+        </aside>
+    </div>
+    <div id="screen-meme-gen" class = "screen screen-inactive">
+      <button class = "change-screen" onclick="changeAScreen()">Pick another meme</button>
+      <canvas id="canvas-meme-gen" width="500" height="400"></canvas><br />
+      <form>
+        <input type="text" name="top-text">
+        <input type="text" name="bottom-text">
+      </form>
+        </div>
+    </div>
+
       <div class "Rakefet">
         <div class="devs-info-container">
           <div class="about-pic">

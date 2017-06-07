@@ -7,13 +7,37 @@
     
 }
 .screen-inactive{
+    transform: translate(-2750px,0);
     position: absolute;
-    right:3000px;
 }
-#screen-meme-gen{
+.screens-container{
     display: flex;
     justify-content: center;
 }
+
+
+#screen-meme-gen{
+    display: flex;
+    justify-content: center;
+    form{
+        height: 70px;
+        display: flex; 
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    .screen-inactive{
+        position: absolute;
+        
+    }
+}
+
+#screen-pick-meme{
+    form{
+        display: flex;
+        justify-content: center;
+    }
+}
+//DEBUG PURPOSE
 canvas {
     background-color: pink;
 }

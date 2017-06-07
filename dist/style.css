@@ -643,12 +643,40 @@ button {
   position: relative; }
 
 .screen-inactive {
-  position: absolute;
-  right: 3000px; }
+  transform: translate(-2750px, 0);
+  position: absolute; }
+
+.screens-container {
+  display: flex;
+  justify-content: center; }
 
 #screen-meme-gen {
+  display: flex;
+  justify-content: center; }
+  #screen-meme-gen form {
+    height: 70px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; }
+  #screen-meme-gen .screen-inactive {
+    position: absolute; }
+
+#screen-pick-meme form {
   display: flex;
   justify-content: center; }
 
 canvas {
   background-color: pink; }
+
+#screen-pick-meme aside {
+  display: flex;
+  justify-content: center;
+  height: 70px; }
+
+.search-array {
+  width: 400px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap; }
+  .search-array div {
+    margin-left: 15px; }
