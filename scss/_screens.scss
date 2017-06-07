@@ -8,11 +8,18 @@
 }
 .screen-inactive{
     position: absolute;
-    right:3000px;
+    //right:3000px;
+    transform: translate(-1500px,0);
 }
 #screen-meme-gen{
     display: flex;
     justify-content: center;
+    form{
+        height: 70px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
 }
 canvas {
     background-color: pink;
