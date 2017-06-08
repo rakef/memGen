@@ -677,6 +677,9 @@ textarea, .contact-us input {
   width: 38px;
   height: 33px; }
 
+.nav-arrow:hover {
+  cursor: pointer; }
+
 @media screen and (max-width: 720px) {
   .devs-info-container {
     flex-direction: column;
@@ -715,9 +718,6 @@ button:hover {
 #screen-pick-meme form {
   display: flex;
   justify-content: center; }
-
-canvas {
-  background-color: pink; }
 
 .toolbar {
   display: flex;

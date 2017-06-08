@@ -15,10 +15,6 @@
    
 .about-pic{
     padding-left:120px;
-    // img{
-    //     max-width: initial;
-    //     height: auto;
-    // }
 }    
 
 .about-text {
@@ -118,15 +114,11 @@ cursor: pointer;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-  //  padding-top: 74px;
     min-width: 180px;
 }
 
 .right-contact-us div {
     display: flex;
-    // flex-wrap: wrap;
-    //padding-bottom: 46px;
-   // font-size: 12px;
 }
 
 .nav-arrow{
@@ -144,7 +136,6 @@ cursor: pointer;
             padding-top: 10px;
         }
         .about-pic {
-            //padding-left: 10px;
             order:3;
         }     
         .about-text {

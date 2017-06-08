@@ -16,7 +16,7 @@ var gImgs =[{ url:'assets/img/memeGen/0.png', keywords:[ 'presice', 'determined'
             ];
 var gImgState ={
     textAlign:'center',
-    textSize:'2.5em',
+    textSize:2.5,
     fontColor:'white',
     fontStroke:'black',
     fontStyle:'Arial'
@@ -140,7 +140,7 @@ function drawText(canvas, text, width,height){
         return;   
     }
     var ctx = canvas.getContext("2d");
-    ctx.font = `${gImgState.textSize} ${gImgState.fontStyle}`;
+    ctx.font = `${gImgState.textSize}em ${gImgState.fontStyle}`;
     ctx.fillStyle = gImgState.fontColor;
     ctx.strokeStyle = gImgState.fontStroke;
     ctx.textAlign = gImgState.textAlign;
@@ -198,3 +198,22 @@ function displayMainPage(){
     document.querySelector('.devs-info-container').classList.remove('hide-element');
 
 }
+ function alignText(side){
+    gImgState.textAlign = side;
+    drawMemeWithText();
+ }
+ function changeTextSize(cond){
+     switch (cond){
+         case 'GROW':
+            gImgState.textSize += 0.1;
+            break;
+        case 'SHRINK':
+            gImgState.textSize -= 0.1;
+            break;
+     }
+     drawMemeWithText();
+ }
+ function deleteTxt(){
+     clearAllElValues();
+     drawMemeWithText();
+ }

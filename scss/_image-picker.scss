@@ -6,7 +6,7 @@
     flex-wrap: wrap;
     .image{
         // display: flex;                //makes the display more beautiful 
-        // justify-content: center;      //-but fucks the canvas from some reason
+        // justify-content: center;      //-but wroins the canvas
         overflow-x: auto;
         overflow-y: auto;
         overflow: hidden;
@@ -28,7 +28,6 @@
 
 .search-array{
     max-width:400px;
-    // height: 310px;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
