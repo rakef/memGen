@@ -192,3 +192,13 @@ function clearAllElValues(){
     gElInput.bottomText.value = null;
     gElInput.topText.value = null;
 }
+
+
+// Rakefet begins
+function sendUserInfo() {
+    document.querySelector('#clickedButton').classList.add('clicked-button');
+    console.log('sup');
+}
+
+// Rakeft ends
+
