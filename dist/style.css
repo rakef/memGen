@@ -561,10 +561,12 @@ header li {
 .keyword:hover {
   cursor: pointer; }
 
-#screen-pick-meme aside {
-  display: flex;
-  justify-content: center;
-  min-height: 70px; }
+#screen-pick-meme {
+  width: 100%; }
+  #screen-pick-meme aside {
+    display: flex;
+    justify-content: center;
+    min-height: 70px; }
 
 .devs-info-container {
   background-color: #2AB499;
@@ -659,7 +661,7 @@ textarea, .contact-us input {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  min-width: 580px;
+  max-width: 580px;
   margin-right: 5px; }
 
 .right-contact-us {
@@ -680,13 +682,16 @@ textarea, .contact-us input {
     flex-direction: column;
     padding-top: 10px; }
   .about-pic {
-    padding-left: 10px;
     order: 3; }
   .about-text {
     order: 1; } }
 
 button:hover {
   cursor: pointer; }
+
+@media (max-width: 600px) {
+  .contact-us {
+    padding-left: 0; } }
 
 .screen {
   transition: 2s; }

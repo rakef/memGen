@@ -110,7 +110,7 @@ cursor: pointer;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    min-width: 580px;
+    max-width: 580px; 
     margin-right: 5px;
 }
 
@@ -140,7 +140,7 @@ cursor: pointer;
             padding-top: 10px;
         }
         .about-pic {
-            padding-left: 10px;
+            //padding-left: 10px;
             order:3;
         }     
         .about-text {
@@ -150,4 +150,9 @@ cursor: pointer;
 
 button:hover{
     cursor: pointer;
+}
+@media (max-width: 600px) {
+    .contact-us{
+        padding-left: 0;
+    }
 }
