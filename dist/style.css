@@ -622,7 +622,7 @@ p {
 textarea, .contact-us input {
   margin-top: 24px;
   background-color: #454545;
-  width: 580px;
+  max-width: 580px;
   height: 38px;
   border: none;
   padding-top: 5px; }
@@ -656,26 +656,21 @@ textarea, .contact-us input {
 .contact-us button:hover {
   cursor: pointer; }
 
-.contact-us button:hover {
-  cursor: pointer; }
-
 .left-contact-us {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  width: 580px;
+  min-width: 580px;
   margin-right: 5px; }
 
 .right-contact-us {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  padding-top: 74px;
-  width: 180px; }
+  min-width: 180px; }
 
 .right-contact-us div {
-  padding-bottom: 46px;
-  font-size: 12px; }
+  display: flex; }
 
 .contact-us-txt-field:nth-child(2) {
   background: red; }

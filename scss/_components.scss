@@ -64,7 +64,7 @@ p {
 textarea, .contact-us input {
     margin-top: 24px;
     background-color: #454545;
-    width: 580px;
+    max-width: 580px;
     height: 38px;
     border: none;
     padding-top:5px;
@@ -106,16 +106,11 @@ textarea, .contact-us input {
 cursor: pointer;
 }
 
-.contact-us button:hover{
-cursor: pointer;
-}
-
-
 .left-contact-us{
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    width: 580px;
+    min-width: 580px;
     margin-right: 5px;
 }
 
@@ -123,13 +118,15 @@ cursor: pointer;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    padding-top: 74px;
-    width: 180px;
+  //  padding-top: 74px;
+    min-width: 180px;
 }
 
 .right-contact-us div {
-    padding-bottom: 46px;
-    font-size: 12px;
+    display: flex;
+    // flex-wrap: wrap;
+    //padding-bottom: 46px;
+   // font-size: 12px;
 }
 
 .our-contact-info:nth-of-type(4) {
@@ -143,7 +140,7 @@ cursor: pointer;
         .devs-info-container {
             flex-direction: column;
             padding-top: 10px;
-            }
+        }
         .about-pic {
             padding-left: 10px;
             order:3;
