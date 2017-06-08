@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="UTF-8">
-  <title>Coding Academy</title>
+  <title>Meme Generator</title>
   <link rel="stylesheet" href="dist/style.css">
 </head>
 
@@ -28,30 +28,34 @@
     <div class="border-bottom"></div>
 
     <main>
-      <div class="screens-container">
+      <div class = "screens-container">
+    <div id="screen-meme-gen" class = "screen screen-inactive">
+      
+      <canvas id="canvas-meme-gen" width="500" height="400"></canvas><br />
+      <div class = "form">
+        <input type="text" name="top-text">
+        <div class = "toolbar">
+          <div class = "btns-text-align"> <button onclick = "alignText('LEFT')">align-L</button> <button onclick = "alignText('CENTER')">align-C</button> <button onclick = "alignText('RIGHT')">align-R</button> </div> 
+          <div class = "btns-text-size"> <button onclick = "changeTextSize('GROW')" class = "small">+</button> <button  class = "small" onclick = "changeTextSize('SHRINK')">-</button> </div> 
+          <div class = "btns-font-style"><button>color</button><button onclick = "changeFontStyle('TOGGLE_STROKE')">stroke</button><button onclick = "changeFontStyle('FONT_FAMILY')">font</button></div>
+          <div class = "btns-utilies"> <button>delete</button></div>
+        </div>
+        <input type="text" name="bottom-text">
+        <button class = "change-screen" onclick = "changeAScreen()">Pick another meme</button>
+      </div>
+        </div>
         <div id="screen-pick-meme" class="screen screen-active">
-          <div class="images">
+        <div class="images">
 
           </div>
-          <form>
-            <input type="text" name="search-text">
-            <input type="button" name="search-button" value="search" onclick="search()">
-          </form>
-          <aside>
-            <div class="search-array"></div>
-          </aside>
-        </div>
-        <div id="screen-meme-gen" class="screen screen-inactive">
-          <button class="change-screen" onclick="changeAScreen()">Pick another meme</button>
-          <canvas id="canvas-meme-gen" width="500" height="400"></canvas><br />
-          <form>
-            <input type="text" name="top-text">
-            <input type="text" name="bottom-text">
-          </form>
-        </div>
-      </div>
 
-      <div class "Rakefet">
+        <form>
+          <input type="text" name="search-text">
+          <input type="button" name="search-button" value="search" onclick = "search()">
+        </form>
+        <aside>
+          <div class = "search-array"></div>
+        </aside>
         <div class="devs-info-container">
           <div class="about-pic">
             <image src="../assets/img/about.png"></image>
@@ -62,6 +66,10 @@
             <p>Hi, we're Yefim &#38; Rakefet, and we like memes</p>
           </div>
         </div>
+    </div>
+    </div>
+    
+
         <div class="contact-us">
           <div class="left-contact-us">
             <h3>Get In Touch</h3>
@@ -91,7 +99,14 @@ Elm St. 14/05 Lost City
           </div>
 
         </div>
-      </div>
+
+
+
+
+
+
+
+
     </main>
   </div>
   <script src="js/main.js"></script>
