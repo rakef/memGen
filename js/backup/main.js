@@ -47,6 +47,7 @@ function init(){
 }
 function buildSearchCount(){
     var htmlCode = '';
+    //gTottalSearchCount = localStorage.getItem("TottalCount");
     var keywordsCount = localStorage.getItem("keywordsCount");
     var fontSize = 1;
     if(gTottalSearchCount !== "undefined" && gTottalSearchCount)
@@ -72,7 +73,12 @@ function buildSearchCount(){
             return 1;
         }
     });
-    singledOutKeyWords.forEach( function(keyword,idx){
+    // singledOutKeyWords.sort( function sortBySearchCount(a,b){
+    //     //debugger;
+    //     return ( keywordsCount[b] - keywordsCount[a]);
+    // });
+    
+    singledOutKeyWords.forEach( function(keyword,idx){///////////////
         fontSize = ((8+keywordsCount[keyword]) / gTottalSearchCount)*4;
         fontSize = (fontSize < 0.7)? 0.7 : fontSize;
         htmlCode += `<div class = "keyword" onclick = "addTagSearch(this)" style = "font-size:${fontSize}em">${keyword}</div>`;
@@ -140,6 +146,13 @@ function drawText(canvas, text, width,height){
         return;   
     }
     var ctx = canvas.getContext("2d");
+//     var gImgState ={
+//     textAlign:'center',
+//     textSize:'2.5em',
+//     fontColor:'white',
+//     fontStroke:'black',
+//     fontStyle:'Arial'
+// };
     ctx.font = `${gImgState.textSize} ${gImgState.fontStyle}`;
     ctx.fillStyle = gImgState.fontColor;
     ctx.strokeStyle = gImgState.fontStroke;
@@ -173,28 +186,9 @@ window.onbeforeunload = function(e) {
     gElInput.topText.value = null;
     gElSearchInput.value = null;
     localStorage.setItem("keywordsCount",JSON.stringify(gKeywordSearchCount));
+    // localStorage.setItem("TottalCount", gTottalSearchCount);
 }
 function clearAllElValues(){
     gElInput.bottomText.value = null;
     gElInput.topText.value = null;
-}
-
-
-
-function sendUserInfo() {
-    document.querySelector('#clickedButton').classList.add('clicked-button');
-    console.log('sup');
-}
-
-
-
-function hideElement(){
-    document.querySelector('.devs-info-container').classList.add('hide-element')
-    document.querySelector('.contact-us').classList.add('hide-element')
-}
-
-function displayMainPage(){
-    document.querySelector('.contact-us').classList.remove('hide-element');
-    document.querySelector('.devs-info-container').classList.remove('hide-element');
-
 }

@@ -134,6 +134,10 @@ cursor: pointer;
     height: 33px;
 
 }
+
+.nav-arrow:hover{
+    cursor: pointer;
+}
     @media screen and (max-width: 720px) {
         .devs-info-container {
             flex-direction: column;
@@ -156,3 +160,4 @@ button:hover{
         padding-left: 0;
     }
 }
+
