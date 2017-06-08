@@ -2,6 +2,8 @@
 console.log("main launched!");
 var gElScreen ={elPickMeme:null, elGenMeme:null};
 var gElInput = {bottomText:null, topText:null};
+var gKeywordSearchCount;
+var gTottalSearchCount = 0;
 
 var gImgs =[{ url:'assets/img/memeGen/0.png', keywords:[ 'presice', 'determined' ] },
             { url:'assets/img/memeGen/1.png', keywords:[ 'doubtful', 'not sure' ] },
@@ -12,6 +14,13 @@ var gImgs =[{ url:'assets/img/memeGen/0.png', keywords:[ 'presice', 'determined'
             { url:'assets/img/memeGen/6.png', keywords:[ 'interested', 'determined' ] },
             { url:'assets/img/memeGen/7.png', keywords:[ 'happy', 'inviting' ] }
             ];
+var gImgState ={
+    textAlign:'center',
+    textSize:'2.5em',
+    fontColor:'white',
+    fontStroke:'black',
+    fontStyle:'Arial'
+};
 
 
 var gIsRecursing = false;
@@ -34,7 +43,53 @@ function init(){
     gElInput.bottomText.oninput = addBottomText;
     gElSearchInput.oninput = search;
     renderMemeTable(gImgs);
-    renderSearchArray();
+    gKeywordSearchCount = buildSearchCount();
+}
+function buildSearchCount(){
+    var htmlCode = '';
+    //gTottalSearchCount = localStorage.getItem("TottalCount");
+    var keywordsCount = localStorage.getItem("keywordsCount");
+    var fontSize = 1;
+    if(gTottalSearchCount !== "undefined" && gTottalSearchCount)
+    {
+        gTottalSearchCount = JSON.parse(gTottalSearchCount);
+    } else  gTottalSearchCount = 0;
+    if(keywordsCount !== "undefined" && keywordsCount)
+    {
+        keywordsCount = JSON.parse(keywordsCount);
+    } else  keywordsCount = {};
+    var keywords =[];
+    gImgs.forEach( function(img){
+        img.keywords.forEach( function getKeywords(keyword){
+            keywords.push(keyword);
+        });
+    });
+    keywords.sort();
+    var singledOutKeyWords = keywords.filter( function removeDuplicates(keyword,idx){
+        if(keyword !== keywords[idx+1]){
+            if( !keywordsCount[keyword] ){  
+                keywordsCount[keyword] = 0;
+            } else  gTottalSearchCount += keywordsCount[keyword];
+            return 1;
+        }
+    });
+    // singledOutKeyWords.sort( function sortBySearchCount(a,b){
+    //     //debugger;
+    //     return ( keywordsCount[b] - keywordsCount[a]);
+    // });
+    
+    singledOutKeyWords.forEach( function(keyword,idx){///////////////
+        fontSize = ((8+keywordsCount[keyword]) / gTottalSearchCount)*4;
+        fontSize = (fontSize < 0.7)? 0.7 : fontSize;
+        htmlCode += `<div class = "keyword" onclick = "addTagSearch(this)" style = "font-size:${fontSize}em">${keyword}</div>`;
+    })
+
+    var elSearchArray = document.querySelector('.search-array');
+    elSearchArray.innerHTML = htmlCode;
+
+
+    return keywordsCount;
+
 }   
 function renderMemeTable(imgs){
     var htmlCode = "";
@@ -43,39 +98,17 @@ function renderMemeTable(imgs){
     });
     var elImages = document.querySelector('.images');
     elImages.innerHTML = htmlCode;
+    
 
 }
 function renderSearchArray(){
-    var htmlCode = '';
-    var keywords =[];
-    gImgs.forEach( function(img){
-        img.keywords.forEach( function(keyword){
-            keywords.push(keyword);
-        });
-    });
-    keywords.sort();
-    var singledOutKeyWords = keywords.filter( function(keyword,idx){
-        if(keyword !== keywords[idx+1]){
-            return 1;
-        }
-    });
-    singledOutKeyWords.sort(function(a,b){
-        return localStorage(a) - localStorage(b);
-    });
-    singledOutKeyWords.forEach( function(keyword,idx){
-        
-    })
 
-    var elSearchArray = document.querySelector('.search-array');
-    elSearchArray.innerHTML = htmlCode;
 }
 function addTagSearch(elTag){
-    var searchCount = localStorage.getItem(elTag.innerText);
-    searchCount++;
-    // debugger;
-    //if(!searchCount)    searchCount++;
-    gElSearchInput.value = elTag.innerText;
-    localStorage.setItem(elTag.innerText, (searchCount++) );
+   //debugger;
+    gKeywordSearchCount[elTag.innerText] = ++gKeywordSearchCount[elTag.innerText];
+    gElSearchInput.value = elTag.innerText; 
+    gTottalSearchCount ++;
     search();
 }
 function changeAScreen(elImg){
@@ -91,6 +124,7 @@ function changeAScreen(elImg){
     drawAMeme(elImg);
 }
 function drawAMeme(elImg){ 
+    
     var ctx = gElMemeCanvas.getContext("2d");
     if(!elImg)  return;
     ctx.clearRect(0, 0, gElMemeCanvas.width, gElMemeCanvas.height);
@@ -112,10 +146,17 @@ function drawText(canvas, text, width,height){
         return;   
     }
     var ctx = canvas.getContext("2d");
-    ctx.font = "40px Arial";
-    ctx.fillStyle = "white";
-    ctx.strokeStyle = "black";
-    ctx.textAlign = "center";
+//     var gImgState ={
+//     textAlign:'center',
+//     textSize:'2.5em',
+//     fontColor:'white',
+//     fontStroke:'black',
+//     fontStyle:'Arial'
+// };
+    ctx.font = `${gImgState.textSize} ${gImgState.fontStyle}`;
+    ctx.fillStyle = gImgState.fontColor;
+    ctx.strokeStyle = gImgState.fontStroke;
+    ctx.textAlign = gImgState.textAlign;
 
     ctx.fillText(text,width, height);
     ctx.strokeText(text,width, height);
@@ -144,9 +185,10 @@ window.onbeforeunload = function(e) {
     gElInput.bottomText.value = null;
     gElInput.topText.value = null;
     gElSearchInput.value = null;
+    localStorage.setItem("keywordsCount",JSON.stringify(gKeywordSearchCount));
+    // localStorage.setItem("TottalCount", gTottalSearchCount);
 }
 function clearAllElValues(){
     gElInput.bottomText.value = null;
     gElInput.topText.value = null;
-    gElSearchInput.value = null;
 }

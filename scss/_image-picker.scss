@@ -5,16 +5,50 @@
     // align-content:center;
     flex-wrap: wrap;
     .image{
-        width:180px;
-        height: 206px;
+        // display: flex;                //makes the display more beautiful 
+        // justify-content: center;      //-but fucks the canvas from some reason
         overflow-x: auto;
         overflow-y: auto;
         overflow: hidden;
+        width:200px;
+        height: 250px;
+       
+        
         border: 1px solid black;
         transition: 5s;
-    }
-    img{
-        margin: -100%;
         
     }
+    img{
+            margin:  -40% -50%;
+        }
 }
+.image:hover{
+    cursor: pointer;
+}
+
+.search-array{
+    max-width:400px;
+    // height: 310px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    div{
+        margin-left: 15px;
+    }
+}
+.keyword{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.keyword:hover{
+    cursor: pointer;
+}
+#screen-pick-meme{
+    aside{
+        display: flex;
+        justify-content: center;
+        min-height: 70px;
+    }
+}
+

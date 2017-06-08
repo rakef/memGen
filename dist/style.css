@@ -533,15 +533,39 @@ header li {
   justify-content: center;
   flex-wrap: wrap; }
   .images .image {
-    width: 180px;
-    height: 206px;
     overflow-x: auto;
     overflow-y: auto;
     overflow: hidden;
+    width: 200px;
+    height: 250px;
     border: 1px solid black;
     transition: 5s; }
   .images img {
-    margin: -100%; }
+    margin: -40% -50%; }
+
+.image:hover {
+  cursor: pointer; }
+
+.search-array {
+  max-width: 400px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap; }
+  .search-array div {
+    margin-left: 15px; }
+
+.keyword {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; }
+
+.keyword:hover {
+  cursor: pointer; }
+
+#screen-pick-meme aside {
+  display: flex;
+  justify-content: center;
+  min-height: 70px; }
 
 .devs-info-container {
   background-color: #2AB499;
@@ -595,7 +619,7 @@ p {
   flex-direction: column;
   flex-wrap: wrap; }
 
-textarea, input {
+textarea, .contact-us input {
   margin-top: 24px;
   background-color: #454545;
   width: 580px;
@@ -618,7 +642,7 @@ textarea, input {
   padding-left: 10px;
   padding-top: 10px; }
 
-button {
+.contact-us button {
   width: 90px;
   height: 37px;
   margin: 16px 0;
@@ -635,6 +659,9 @@ button {
     order: 3; }
   .about-text {
     order: 1; } }
+
+button:hover {
+  cursor: pointer; }
 
 .screen {
   transition: 2s; }
@@ -654,13 +681,6 @@ button {
 #screen-meme-gen {
   display: flex;
   justify-content: center; }
-  #screen-meme-gen form {
-    height: 70px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between; }
-  #screen-meme-gen .screen-inactive {
-    position: absolute; }
 
 #screen-pick-meme form {
   display: flex;
@@ -669,18 +689,17 @@ button {
 canvas {
   background-color: pink; }
 
-#screen-pick-meme aside {
+.toolbar {
   display: flex;
   justify-content: center;
-  height: 70px; }
+  flex-wrap: nowrap; }
+  .toolbar button {
+    flex-shrink: 0; }
 
-.search-array {
-  width: 400px;
+#screen-meme-gen form {
+  min-height: 70px;
   display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap; }
-  .search-array div {
-    margin-left: 15px; }
+  flex-direction: column; }
 
-.keyword:hover {
-  cursor: pointer; }
+#screen-meme-gen .screen-inactive {
+  position: absolute; }
