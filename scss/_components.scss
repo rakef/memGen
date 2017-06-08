@@ -129,13 +129,11 @@ cursor: pointer;
    // font-size: 12px;
 }
 
-.our-contact-info:nth-of-type(4) {
+.nav-arrow{
+    width: 38px;
+    height: 33px;
 
 }
-.contact-us-txt-field:nth-child(2) {
-    background: red;
-}
-
     @media screen and (max-width: 720px) {
         .devs-info-container {
             flex-direction: column;
