@@ -197,7 +197,18 @@ function clearAllElValues(){
 // Rakefet begins
 function sendUserInfo() {
     document.querySelector('#clickedButton').classList.add('clicked-button');
-    console.log('sup');
+    console.log('Clicked');
+}
+
+function hideElement(){
+    document.querySelector('.devs-info-container').classList.add('hide-element')
+    document.querySelector('.contact-us').classList.add('hide-element')
+}
+
+function displayMainPage(){
+    document.querySelector('.contact-us').classList.remove('hide-element');
+    document.querySelector('.devs-info-container').classList.remove('hide-element');
+
 }
 
 // Rakeft ends
