@@ -27,28 +27,28 @@
     <div class="border-bottom"></div>
 
     <main>
-      <div class = "screens-container">
-      <div id="screen-pick-meme" class="screen screen-active">
-        <div class="images">
+      <div class="screens-container">
+        <div id="screen-pick-meme" class="screen screen-active">
+          <div class="images">
 
+          </div>
+          <form>
+            <input type="text" name="search-text">
+            <input type="button" name="search-button" value="search" onclick="search()">
+          </form>
+          <aside>
+            <div class="search-array"></div>
+          </aside>
         </div>
-        <form>
-          <input type="text" name="search-text">
-          <input type="button" name="search-button" value="search" onclick = "search()">
-        </form>
-        <aside>
-          <div class = "search-array"></div>
-        </aside>
-    </div>
-    <div id="screen-meme-gen" class = "screen screen-inactive">
-      <button class = "change-screen" onclick="changeAScreen()">Pick another meme</button>
-      <canvas id="canvas-meme-gen" width="500" height="400"></canvas><br />
-      <form>
-        <input type="text" name="top-text">
-        <input type="text" name="bottom-text">
-      </form>
+        <div id="screen-meme-gen" class="screen screen-inactive">
+          <button class="change-screen" onclick="changeAScreen()">Pick another meme</button>
+          <canvas id="canvas-meme-gen" width="500" height="400"></canvas><br />
+          <form>
+            <input type="text" name="top-text">
+            <input type="text" name="bottom-text">
+          </form>
         </div>
-    </div>
+      </div>
 
       <div class "Rakefet">
         <div class="devs-info-container">
@@ -70,22 +70,35 @@
             <input class="input-text" type="text" placeholder="Name (Required)">
             <input class="input-text" type="text" placeholder="Email (Required)">
             <input class="input-text" type="text" placeholder="Subject">
-            <input class="input-text" type="text" placeholder="Write your message here...">
-            <!--<textarea class="input-text" onfocus="clearContents(this)">Write your message here...-->
-            </textarea>
+            <input class="input-text" id="input-area" type="text" placeholder="Write your message here...">
+            <!--<textarea class="input-text" onfocus="clearContents(this)">Write your message here...
+            </textarea>-->
           </div>
-          <button>Send</button>
+          <button onclick="sendUserInfo()" class="send-button">Send</button>
           <div class="right-contact-us">
+            <div>
+              Quisque Hendrerit: purus dapibus, ornare nibh vitae, viverra nibh. Fusce vitae aliquam tellus. Proin sit amet volutpat libero.
+              Nulla sed nunc et tortor luctus faucibus morbi vitae.
+            </div>
+
+            <div class="our-contact-info">
+            <i class="fa fa-map-marker"></i>
+Elm St. 14/05 Lost City 
+              + 3528 331 86 35 
+              info@hexalcorp.com
+            </div>
           </div>
+
         </div>
       </div>
     </main>
   </div>
-  <!--<script src="js/main.js"></script>
-  <script>
+  <script src="js/main.js"></script>
+  <!--<script>
     function clearContents(element) {
       element.value = '';
     }
   </script>-->
 </body>
+
 </html>

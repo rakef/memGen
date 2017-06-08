@@ -85,7 +85,7 @@ textarea, .contact-us input {
         padding-top: 10px;
 }
 
-.contact-us button{
+.send-button{
     width: 90px;
     height: 37px;
     margin: 16px 0;
@@ -94,14 +94,44 @@ textarea, .contact-us input {
     color: #d7fcf5;
 }
 
+.send-button:active{
+    background-color: #37ddbc;
+}
+
+.contact-us button:hover{
+cursor: pointer;
+}
+
+.contact-us button:hover{
+cursor: pointer;
+}
+
+
 .left-contact-us{
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-
+    width: 580px;
+    margin-right: 5px;
 }
 
-.contact-us-txt-field:nth-child(4) {
+.right-contact-us{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    padding-top: 74px;
+    width: 180px;
+}
+
+.right-contact-us div {
+    padding-bottom: 46px;
+    font-size: 12px;
+}
+
+.our-contact-info:nth-of-type(4) {
+
+}
+.contact-us-txt-field:nth-child(2) {
     background: red;
 }
 
