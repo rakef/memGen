@@ -1,0 +1,29 @@
+.screen {
+    transition: 2s;
+}
+.screen-active{
+    right:0px;
+    position: relative;
+    
+}
+.screen-inactive{
+    transform: translate(-2750px,0);
+    position: absolute;
+}
+.screens-container{
+    display: flex;
+    justify-content: center;
+}
+
+
+#screen-meme-gen{
+    display: flex;
+    justify-content: center;
+}
+
+#screen-pick-meme{
+    form{
+        display: flex;
+        justify-content: center;
+    }
+}

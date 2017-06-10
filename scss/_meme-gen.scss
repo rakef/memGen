@@ -1,0 +1,40 @@
+
+.toolbar{
+    display: flex;
+    justify-content: center;
+    flex-wrap: nowrap;
+    button{
+
+            padding: 0;
+            width: 50px;
+    }
+}
+#screen-meme-gen{
+    .form{
+        min-height: 70px;
+        display: flex; 
+        flex-direction: column;
+    }
+    button{
+        min-height: 50px;
+    }
+    input{
+        height: 100px;
+    }
+    .screen-inactive{
+        position: absolute;
+    }
+}
+@media (max-width: 985px) {
+    #screen-meme-gen{
+        display: flex;
+        flex-direction: column;
+    
+    }
+    canvas{
+        flex-shrink: 1;
+        width: 100%;
+        height: auto;
+    }
+
+}

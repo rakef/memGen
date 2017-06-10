@@ -1,0 +1,247 @@
+[33mcommit d75965f9fe26980bc448b7e81d9a572a719c6f84[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m, [m[1;31morigin/master[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Author: rakef <rakefet.zeiman@gmail.com>
+Date:   Thu Jun 8 13:57:13 2017 +0300
+
+    morning's changes
+
+[33mcommit 773f7edf3ca0c8c38c163c87ffc2cdcfedfdb735[m
+Merge: 9cdc227 ed0ec8e
+Author: rakef <rakefet.zeiman@gmail.com>
+Date:   Wed Jun 7 19:30:38 2017 +0300
+
+    Merge branch 'master' of https://github.com/rakef/memGen
+
+[33mcommit ed0ec8e57ecd742b2f837c528e7e926a682740b1[m
+Author: Fima <FimaRozovsky@hotmail.com>
+Date:   Wed Jun 7 19:25:56 2017 +0300
+
+    synchronized with the version on github
+
+[33mcommit 8f9e9affdd17c29598cdc1c8423fd20443b36c6d[m
+Merge: f2fd6e9 f455609
+Author: Fima <FimaRozovsky@hotmail.com>
+Date:   Wed Jun 7 19:24:50 2017 +0300
+
+    Merge branch 'master' of https://github.com/rakef/memGen
+
+[33mcommit f2fd6e97eeab983e4e9533d698df518951a20b3d[m
+Author: Fima <FimaRozovsky@hotmail.com>
+Date:   Wed Jun 7 19:24:32 2017 +0300
+
+    worked on search tags, sorted them out
+
+[33mcommit 9cdc22748f4fc2df273555195a2abff92d8173fb[m
+Author: rakef <rakefet.zeiman@gmail.com>
+Date:   Wed Jun 7 19:20:39 2017 +0300
+
+    sus
+
+[33mcommit f45560987840375ef942159df2e37aa7bc48a2a2[m
+Merge: 9ff817d ee32de8
+Author: rakef <rakefet.zeiman@gmail.com>
+Date:   Wed Jun 7 18:11:05 2017 +0300
+
+    Merge branch 'master' of https://github.com/rakef/memGen
+
+[33mcommit 9ff817d1b90e637d931e1a6b087419c2af8d789f[m
+Author: rakef <rakefet.zeiman@gmail.com>
+Date:   Wed Jun 7 18:10:56 2017 +0300
+
+    fy
+
+[33mcommit ee32de8e473119d2fdc97ecca7dd474d7e92174f[m
+Author: Fima <FimaRozovsky@hotmail.com>
+Date:   Wed Jun 7 18:09:43 2017 +0300
+
+    made the search tags functional
+
+[33mcommit 66277d8ca507bf79deebbdd8e886b2d5c08105ba[m
+Merge: 18d4ceb 0a192b5
+Author: rakef <rakefet.zeiman@gmail.com>
+Date:   Wed Jun 7 17:00:12 2017 +0300
+
+    fixed merging issues
+
+[33mcommit 18d4ceb35f0363fab7b9d8438c4013df987f32e9[m
+Merge: 247d1bd eef0390
+Author: rakef <rakefet.zeiman@gmail.com>
+Date:   Wed Jun 7 16:48:34 2017 +0300
+
+    added contact us - partialy completed
+
+[33mcommit 0a192b54d7f4fb672df66a7523deea36aa4990a5[m
+Author: Fima <FimaRozovsky@hotmail.com>
+Date:   Wed Jun 7 16:47:23 2017 +0300
+
+    added search functionality + keywords for possible search
+
+[33mcommit a12711e06e3e7916c261ea7c31e3ee54877d74f0[m
+Author: Fima <FimaRozovsky@hotmail.com>
+Date:   Wed Jun 7 11:04:30 2017 +0300
+
+    added a picture writing option
+
+[33mcommit 247d1bd2724df57d7e214ca43116247da101ef20[m
+Author: rakef <rakefet.zeiman@gmail.com>
+Date:   Tue Jun 6 19:53:52 2017 +0300
+
+    m
+
+[33mcommit eef03900969467a3331e2cf59551fac074a8cb1c[m
+Merge: e2a67a5 118a871
+Author: Fima <FimaRozovsky@hotmail.com>
+Date:   Tue Jun 6 19:52:33 2017 +0300
+
+    fixed the merging problems, added drawing a picture on canvas
+
+[33mcommit e2a67a53154ddf7579d1d0c47761b3b4aa2968a7[m
+Author: Fima <FimaRozovsky@hotmail.com>
+Date:   Tue Jun 6 19:21:02 2017 +0300
+
+    added photos and begun working with canvas
+
+[33mcommit 118a8718132cce00e7119632b46beecefe191821[m
+Author: rakef <rakefet.zeiman@gmail.com>
+Date:   Tue Jun 6 19:20:37 2017 +0300
+
+    responsive
+
+[33mcommit 501da6f9c885d68dddc1d6b9718949d6ded5172d[m
+Merge: 3f7de07 62211fd
+Author: rakef <rakefet.zeiman@gmail.com>
+Date:   Tue Jun 6 15:09:21 2017 +0300
+
+    ff
+
+[33mcommit 3f7de07859670d3ec0d553198d5d5c902bce9bed[m
+Author: rakef <rakefet.zeiman@gmail.com>
+Date:   Tue Jun 6 15:03:24 2017 +0300
+
+    a
+
+[33mcommit 62211fd1a87dd5fe2c3ff3af1014e27d871b4de9[m
+Author: Fima <FimaRozovsky@hotmail.com>
+Date:   Tue Jun 6 15:01:49 2017 +0300
+
+    Added pictures, fixed the header
+
+[33mcommit ba751d611f573e44afb831dd5a87dab82bcd0883[m
+Author: Fima <FimaRozovsky@hotmail.com>
+Date:   Tue Jun 6 11:13:03 2017 +0300
+
+    edited the .container class
+
+[33mcommit 460edb79c219410c14e6caa1379e009bbe1d6b50[m
+Merge: 7f08d5b 77a1604
+Author: Fima <FimaRozovsky@hotmail.com>
+Date:   Tue Jun 6 10:48:36 2017 +0300
+
+    Merge branch 'master' of https://github.com/rakef/memGen
+
+[33mcommit 7f08d5bee6c78a660438df703b0780a1c95d2598[m
+Author: Fima <FimaRozovsky@hotmail.com>
+Date:   Tue Jun 6 10:47:49 2017 +0300
+
+    header spaced
+
+[33mcommit 77a16048cc1973f6f291361c511dbb362ef6a4c5[m
+Author: rakef <rakefet.zeiman@gmail.com>
+Date:   Tue Jun 6 10:43:36 2017 +0300
+
+    fix test
+
+[33mcommit 0ee7538dc50880832bf7fd71739ae012568ff18c[m
+Author: Fima <FimaRozovsky@hotmail.com>
+Date:   Tue Jun 6 09:34:13 2017 +0300
+
+    made a header
+
+[33mcommit 270c90560e7f62ba493eb33d8bf6579e91fff85c[m
+Author: Fima <FimaRozovsky@hotmail.com>
+Date:   Tue Jun 6 09:32:20 2017 +0300
+
+    made a header
+
+[33mcommit e8b9dc0af98e0493600c6fcb8c59affa13140cd9[m
+Author: Fima <FimaRozovsky@hotmail.com>
+Date:   Mon Jun 5 18:19:51 2017 +0300
+
+    folder
+
+[33mcommit b1033c240f45464b310504ce5f3f19f090af674a[m
+Author: Fima <FimaRozovsky@hotmail.com>
+Date:   Mon Jun 5 17:55:12 2017 +0300
+
+    added efim and rakeft divs
+
+[33mcommit 28b12619eef9aa09c0debfa19017d38bce9f777f[m
+Author: rakef <rakefet.zeiman@gmail.com>
+Date:   Mon Jun 5 17:52:09 2017 +0300
+
+    lite
+
+[33mcommit b917615fe4a8c6877a852e5318126c1349a1138f[m
+Author: rakef <rakefet.zeiman@gmail.com>
+Date:   Mon Jun 5 17:48:31 2017 +0300
+
+    lite library
+
+[33mcommit 94d0450d2572f041eb4a8872c6fa18c07474d40f[m
+Author: rakef <rakefet.zeiman@gmail.com>
+Date:   Mon Jun 5 17:44:08 2017 +0300
+
+    no pdf
+
+[33mcommit 5db93c272641f87ecdf41b982e9f3734b8551bcc[m
+Author: rakef <rakefet.zeiman@gmail.com>
+Date:   Mon Jun 5 17:41:58 2017 +0300
+
+    mm
+
+[33mcommit bd56d51680f6cc784522ace40142b0e048543c9b[m
+Author: rakef <rakefet.zeiman@gmail.com>
+Date:   Mon Jun 5 17:34:46 2017 +0300
+
+    added pdf
+
+[33mcommit 006fcd19197722092b852819e87a4068ac4ee6d9[m
+Author: rakef <rakefet.zeiman@gmail.com>
+Date:   Mon Jun 5 17:24:50 2017 +0300
+
+    adding pdf
+
+[33mcommit 13f9884c6eee223b3152fa7b53aab477dea58752[m
+Author: rakef <rakefet.zeiman@gmail.com>
+Date:   Mon Jun 5 17:22:25 2017 +0300
+
+    deleting pdf
+
+[33mcommit 8ef6063f6e94cff81ab22a19f9f48e0b88845d50[m
+Author: rakef <rakefet.zeiman@gmail.com>
+Date:   Mon Jun 5 17:11:02 2017 +0300
+
+    testing ignore git
+
+[33mcommit 00727c3dab8d35b929cc47347420b4651e2f7987[m
+Author: rakef <rakefet.zeiman@gmail.com>
+Date:   Mon Jun 5 17:08:39 2017 +0300
+
+    deleted pdf
+
+[33mcommit 8a392868a361a426eb3da777e29075c95c4a2ac0[m
+Author: rakef <rakefet.zeiman@gmail.com>
+Date:   Mon Jun 5 17:05:32 2017 +0300
+
+    gitignore
+
+[33mcommit 694c945650f87367737fdca6939fac5b7b0f31ba[m
+Author: rakef <rakefet.zeiman@gmail.com>
+Date:   Mon Jun 5 16:53:18 2017 +0300
+
+    ignore added
+
+[33mcommit 747f919917d0e5ab08fff14c4156c0860307fd0a[m
+Author: rakef <rakefet.zeiman@gmail.com>
+Date:   Mon Jun 5 16:49:52 2017 +0300
+
+    initial proj
